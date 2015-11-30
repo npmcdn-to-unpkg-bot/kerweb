@@ -8,4 +8,7 @@ Rails.application.config.assets.version = '1.0'
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
-# Rails.application.config.assets.precompile += %w( search.js )
+#  Rails.application.config.assets.precompile += %w( search.js )
+Rails.application.config.assets.precompile += %w( jquery.ui.touch-punch.min.js )
+Rails.application.config.assets.precompile += %w( bannerscollection_zoominout.js )
+Rails.application.config.assets.precompile += %w( bannerscollection_zoominout.css )
