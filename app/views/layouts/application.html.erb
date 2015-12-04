@@ -15,6 +15,11 @@
 
   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
 
+  <script src="//converzilla.kerweb.ru/assets/public.js", type=text/javascript"></script>
+  <script type="text/coffeescript">
+    new Converzilla('542e36c470726f360f000000', {exitForm: false, visitors: true})
+  </script>
+
   <script type="text/javascript">
       var ua = navigator.userAgent.toLowerCase();
       if (ua.indexOf("msie") != -1 || ua.indexOf("opera") != -1) {
@@ -35,11 +40,11 @@
               autoHideBottomNav:true,
               thumbsWrapperMarginTop: -55,
               pauseOnMouseOver:false,
+              showCircleTimer:false,
+
           });
 
       });
-
-
   </script>
 </head>
 
@@ -47,7 +52,7 @@
 
 
 <div id="bannerscollection_zoominout_opportune">
-  <div class="myloader"></div>
+
   <ul class="bannerscollection_zoominout_list">
     <% @projects.each do |project| %>
         <li data-text-id="#<%= project.name %>" data-bottom-thumb=<%= project.demo_img.url(:thumb) %> data-initialZoom="1.1" data-finalZoom="1">
@@ -57,8 +62,10 @@
   </ul>
   <% @projects.each do |project| %>
       <div id="<%= project.name %>" class="bannerscollection_zoominout_texts">
-        <div class="bannerscollection_zoominout_text_line textElement11_opportuneFullScreen" data-initial-left="550" data-initial-top="70" data-final-left="100" data-final-top="70" data-duration="0.5" data-fade-start="0" data-delay="0">Ultra-Smooth Zoom In/Out Effect</div>
-        <div class="bannerscollection_zoominout_text_line textElement12_opportuneFullScreen" data-initial-left="50" data-initial-top="120" data-final-left="100" data-final-top="120" data-duration="0.5" data-fade-start="0" data-delay="0.3">Customizable with many <a href="http://codecanyon.net/user/LambertGroup" target="_blank">parameters</a></div>
+        <div class="textcontainer">
+            <div class="bannerscollection_zoominout_text_line textElement11_opportuneFullScreen" data-fade-start="0"><%= project.name %></div>
+            <div class="bannerscollection_zoominout_text_line textElement12_opportuneFullScreen" data-fade-start="0" data-delay="0.3"><%= project.description %></div>
+        </div>
       </div>
 <% end %>
 </div>

@@ -51,13 +51,7 @@ skins available:
 	z-index:10;
 }
 .myloader {
-	background:url(skins/loader.gif);
-	width:37px;
-	height:37px;
-	position:absolute;
-	left:49%;
-	top:49%;
-	z-index:5;
+    display: none;
 }
 
 
@@ -473,10 +467,15 @@ skins available:
 	width:100%;
 }
 .bannerscollection_zoominout_text_line {
-	position:absolute;
+	position:relative;
 }
 /****/
-
+.textcontainer{
+    position: relative;
+    width: 30%;
+    height: 100vh;
+    background: #fefefe;
+}
 
 
 /***OpportuneFixedDimensionsTexts***/

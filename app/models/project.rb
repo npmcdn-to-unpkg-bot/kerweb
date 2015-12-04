@@ -11,7 +11,7 @@ class Project
 
   field :link
   field :name
-  field :description
+  field :description, type: String
 
   validates_attachment_content_type :demo_img, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 end
