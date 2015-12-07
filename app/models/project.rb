@@ -10,6 +10,7 @@ class Project
 
 
   field :link
+  field :link_text
   field :name
   field :description, type: String
 

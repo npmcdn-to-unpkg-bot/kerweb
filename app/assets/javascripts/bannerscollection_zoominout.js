@@ -181,7 +181,7 @@
             display: "block"
         }), d("#contentHolderUnit_" + b.previous_current_img_no, k).animate({
             opacity: 0
-        }, 800, "easeOutQuad", function() {
+        }, 0, "easeOutQuad", function() {
             b.slideIsRunning = !1;
             g.fadeSlides && (d("#contentHolderUnit_" + b.current_img_no, k).css({
                 "z-index": 1

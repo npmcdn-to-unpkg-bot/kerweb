@@ -67,7 +67,7 @@ skins available:
 	position:absolute;
 	left:0;
 	top:0;
-	z-index:2;
+	z-index:5;
 	width:100%;
 }
 
@@ -489,12 +489,10 @@ skins available:
 .textElement12_opportune {
 	font: bold 16px 'Droid Sans', Verdana, Helvetica, sans-serif;
 	line-height:23px;
-	text-transform:uppercase;
 	color:#333333;
 }
 
 .textElement12_opportune a {
-	text-transform:uppercase;
 	color:#ff6c00;
 	text-decoration:none;
 }
@@ -740,13 +738,11 @@ skins available:
 }
 .textElement12_opportuneFullScreen {
 	font: bold 22px 'Droid Sans', Verdana, Helvetica, sans-serif;
-	text-transform:uppercase;
 	padding:6px 13px 6px 13px;
 	color:#000000;
 }
 
 .textElement12_opportuneFullScreen a {
-	text-transform:uppercase;
 	color:#ff6c00;
 	text-decoration:none;
 }
@@ -2021,3 +2017,11 @@ skins available:
 	display:none;
 }
 
+.project-link{
+    float: right;
+    margin: 10px 10px 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 10px);
+    text-align: end;
+}
