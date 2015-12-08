@@ -317,7 +317,7 @@
             });
             "opportune" != a.skin && v.css("margin-top", parseInt(a.thumbsWrapperMarginTop / (a.origWidth / a.width), 10) + "px");
             g = F();
-            a.enableTouchScreen && (a.fadeSlides && (e = Math.floor(1E5 * Math.random()), f.wrap('<div id="zoominoutParent_' + e + '" style="position:relative;" />'), d("#zoominoutParent_" + e).width(a.width + 1), d("#zoominoutParent_" + e).height(a.height)), -1 != g && 9 == g && a.fadeSlides && "opportune" == a.skin || (j.css("cursor", "url(" + a.absUrl + a.skinFolder + "hand.cur),url(" + a.absUrl + a.skinFolder + "hand.cur),move"), f.css("cursor", "url(" + a.absUrl + a.skinFolder + "hand.cur),url(" + a.absUrl + a.skinFolder + "hand.cur),move")), j.css("left", "0"), a.fadeSlides ? -1 != g && 9 == g && a.fadeSlides && "opportune" == a.skin || f.draggable({
+            a.enableTouchScreen && (a.fadeSlides && (e = Math.floor(1E5 * Math.random()), f.wrap('<div id="zoominoutParent_' + e + '" style="position:relative;" />'), d("#zoominoutParent_" + e).width(a.width + 1), d("#zoominoutParent_" + e).height(a.height)), -1 != g && 9 == g && a.fadeSlides && "opportune" == a.skin || j.css("left", "0"), a.fadeSlides ? -1 != g && 9 == g && a.fadeSlides && "opportune" == a.skin || f.draggable({
                 axis: "x",
                 containment: "parent",
                 start: function() {

@@ -1,4 +1,34 @@
+<script type="text/coffeescript">
+    new Converzilla('542e36c470726f360f000000', {exitForm: false, visitors: true})
+</script>
 
+<script type="text/javascript">
+    var ua = navigator.userAgent.toLowerCase();
+    if (ua.indexOf("msie") != -1 || ua.indexOf("opera") != -1) {
+        jQuery('body').css('overflow','hidden');
+        jQuery('html').css('overflow','hidden');
+    }
+
+    jQuery(function() {
+        jQuery('#bannerscollection_zoominout_opportune').bannerscollection_zoominout({
+            skin: 'opportune',
+            responsive:true,
+            width: 1920,
+            height: 1200,
+            width100Proc:true,
+            height100Proc:true,
+            showNavArrows:true,
+            showBottomNav:true,
+            autoHideBottomNav:true,
+            thumbsWrapperMarginTop: -55,
+            pauseOnMouseOver:false,
+            showCircleTimer:false,
+            autoplay:15,
+
+        });
+
+    });
+</script>
 <div id="bannerscollection_zoominout_opportune">
 
   <ul class="bannerscollection_zoominout_list">
