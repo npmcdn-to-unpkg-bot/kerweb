@@ -15,6 +15,8 @@
 //= require turbolinks
 //= require jquery.turbolinks
 //= require jquery_ujs
+//= require bannerscollection_zoominout
+//= require jquery.ui.touch-punch.min
 //= require_tree .
 
 
