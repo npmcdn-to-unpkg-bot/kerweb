@@ -12,6 +12,7 @@ class Project
   field :link
   field :link_text
   field :name
+  field :order, type: Integer
   field :description, type: String
 
   validates_attachment_content_type :demo_img, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
