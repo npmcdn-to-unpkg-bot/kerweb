@@ -23,6 +23,7 @@
                 opacity: parseInt(currentText_arr[e].attr("data-fade-start"), 10) / 100
             });
             var h = currentText_arr[e];
+            h.css("display", "none")
             setTimeout(function() {
                 b.responsive && (newCss = "", -1 != h.css("font-size").lastIndexOf("px") ? (fontSize = h.css("font-size").substr(0, h.css("font-size").lastIndexOf("px")), newCss += "font-size:" + fontSize / (b.origWidth / b.width) + "px;") : -1 != h.css("font-size").lastIndexOf("em") && (fontSize = h.css("font-size").substr(0, h.css("font-size").lastIndexOf("em")), newCss += "font-size:" + fontSize / (b.origWidth / b.width) + "em;"), -1 != h.css("line-height").lastIndexOf("px") ? (lineHeight = h.css("line-height").substr(0, h.css("line-height").lastIndexOf("px")), newCss += "line-height:" + lineHeight / (b.origWidth / b.width) + "px;") : -1 != h.css("line-height").lastIndexOf("em") && (lineHeight = h.css("line-height").substr(0, h.css("line-height").lastIndexOf("em")), newCss += "line-height:" + lineHeight / (b.origWidth / b.width) + "em;"), h.wrapInner('<div class="newFS" style="' + newCss + '" />'));
                 var f = h.attr("data-final-left"),
@@ -30,13 +31,18 @@
                 b.responsive && (f = parseInt(f / (b.origWidth / b.width), 10), g = parseInt(g / (b.origWidth / b.width), 10));
                 var e = 1;
                 !0 == a.isVideoPlaying && (e = 0);
+                //h.animate({
+                //    opacity: e,
+                //    left: f + "px",
+                //    top: g + "px"
+                //}, 1E3 * h.attr("data-duration"), function() {
+                //    !0 == a.isVideoPlaying && d(a.currentImg.attr("data-text-id")).children().css("opacity", 0)
+                //})
+                h.css("left", "-30%");
+                h.css("display", "block");
                 h.animate({
-                    opacity: e,
-                    left: f + "px",
-                    top: g + "px"
-                }, 1E3 * h.attr("data-duration"), function() {
-                    !0 == a.isVideoPlaying && d(a.currentImg.attr("data-text-id")).children().css("opacity", 0)
-                })
+                    left: 0
+                }, 900);
             }, 1E3 * currentText_arr[e].attr("data-delay"));
             e++
         })

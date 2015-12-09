@@ -156,13 +156,6 @@
 
 /****/
 
-.textcontainer{
-    position: relative;
-    width: 30%;
-    height: 100vh;
-    background: #fefefe;
-}
-
 /***OpportuneFixedDimensionsTexts***/
 
 .textElement11_opportune {
@@ -398,14 +391,14 @@
 /***OpportuneFullScreenTexts***/
 
 .textElement11_opportuneFullScreen {
-	font: bold 38px 'Droid Sans', Verdana, Helvetica, sans-serif;
+	font: bold 3em 'Droid Sans', Verdana, Helvetica, sans-serif;
 
 	padding: 6px 13px 6px 13px;
 	color: #000000;
 }
 
 .textElement12_opportuneFullScreen {
-	font: bold 22px 'Droid Sans', Verdana, Helvetica, sans-serif;
+	font: bold 1.5em 'Droid Sans', Verdana, Helvetica, sans-serif;
 	padding: 6px 13px 6px 13px;
 	color: #000000;
 }
@@ -747,11 +740,3 @@
 	display: none;
 }
 
-.project-link{
-    float: right;
-    margin: 10px 10px 10px 0;
-    position: absolute;
-    bottom: 0;
-    width: calc(100% - 10px);
-    text-align: end;
-}

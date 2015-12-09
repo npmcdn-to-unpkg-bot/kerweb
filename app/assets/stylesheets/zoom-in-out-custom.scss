@@ -41,3 +41,20 @@
 .textElement11_opportuneFullScreen{
   text-transform: uppercase;
 }
+
+.textcontainer{
+  left: -30%;
+  position: relative;
+  width: 30%;
+  height: 100vh;
+  background: #fefefe;
+}
+
+.project-link{
+  float: right;
+  margin: 10px 10px 10px 0;
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 10px);
+  text-align: end;
+}
