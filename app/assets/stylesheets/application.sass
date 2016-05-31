@@ -1,0 +1,28 @@
+/*
+ *= require_tree .
+ *= require jquery-ui
+ *= require animate
+ *= require slick
+ *= require slick-theme
+ *= require_self
+ */
+
+@import "bootstrap-sprockets"
+@import "bootstrap"
+@import "font-awesome"
+@import "colors"
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500italic,700,500,700italic,900,900italic&subset=latin,cyrillic-ext,latin-ext,cyrillic)
+
+html, body
+  font-family: 'Roboto', sans-serif
+  min-height: 100%
+  height: auto
+  font-size: 18px
+  #wrapper
+    z-index: 1
+  footer
+    z-index: 100
+    width: 100%
+    height: 60px
+    line-height: 60px
+    background-color: $main-white-color

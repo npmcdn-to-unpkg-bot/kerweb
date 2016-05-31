@@ -1,0 +1,150 @@
+section#intro data-parallax="scroll" data-image-src="#{image_path('background.jpg')}"
+  .logo.text-center
+    = image_tag 'logo.png', class: 'animated fadeIn'
+    .title Kernel Web. Студия разработки
+  .scroll-to.wow.bounce data-wow-iteration="infinite" data-wow-duration="2s" data-scroll="#projects"
+    = fa_icon 'angle-double-down'
+
+section#projects
+  .row
+    h1.text-center.red Проекты
+  #recent-works.off-white
+    .portfolio-wrapper.wow.fadeInUp data-wow-delay="300ms" data-wow-duration="700ms"
+      ul.portfolio-items
+        - @projects.each do |project|
+          li
+            .portfolio-content
+              img.img-responsive src=project.demo_img(:thumb) alt=""
+              .overlay
+                h2
+                  = project.name
+                p
+                  = project.description
+                a.folio-link href=project.link
+                  i.fa.fa-long-arrow-right
+
+section#info data-parallax="scroll" data-image-src="#{image_path('info-bg.jpg')}"
+  .container
+    .text-center.wow.zoomIn.animated data-wow-delay="300ms" data-wow-duration="700ms"
+      h1.text-uppercase.white Немного о нас
+      h3 Некоторые факты, которые расскажут Вам о нашей работе
+    .row.funs
+      .col-xs-4.wow.zoomIn.animated.text-center data-wow-delay="500ms" data-wow-duration="700ms"
+        i.fa.fa-group
+        h2
+          = @working_with_us.title
+        h3.timer data-number="#{@working_with_us.value}"
+      .col-xs-4.wow.zoomIn.animated.text-center data-wow-delay="700ms" data-wow-duration="700ms"
+        i.fa.fa-gift
+        h2
+          = @projects_released.title
+        h3.timer data-number="#{@projects_released.value}"
+      .col-xs-4.wow.zoomIn.animated.text-center data-wow-delay="900ms" data-wow-duration="700ms"
+        i.fa.fa-trophy
+        h3
+          = @awards_owned.title
+        h3.timer data-number="#{@awards_owned.value}"
+
+
+section#team
+  .container-fluid
+    .row
+      h1.text-center.red Команда
+    .row
+      - @employers.each do |employee|
+        .col-lg-4.col-md-4.col-sm-6.col-xs-12.employee
+          .employee-image
+            img src=employee.avatar(:thumb)
+          .employee-overlay
+            .description
+              h2
+                = employee.second_name
+                |&nbsp;
+                = employee.first_name
+              h3
+                = employee.position
+
+section#social data-parallax="scroll" data-image-src="#{image_path('social-bg.jpg')}"
+  .text.text-center.wow.zoomIn.animated data-wow-delay="300ms" data-wow-duration="700ms" style=("visibility: visible; animation-duration: 700ms; animation-delay: 300ms; animation-name: zoomIn;")
+    i.fa.fa-twitter
+    h1.text-uppercase Читайте нас в Twitter! Будьте в курсе всех наших событий!
+    hr
+    h2 Все самое интересное из мира веб-разработки.
+    p
+      | @
+      a href="#" kerweb
+section#technologies
+  .container
+    .row
+      h1.text-center.red Технологии
+    .row
+      .technology-slider
+        - @technologies.each do |technology|
+          .technology
+            a href=technology.link target="_blank"
+              img src=technology.image(:thumb)
+
+
+section#map
+
+coffee:
+  $ ->
+    comma_separator_number_step = $.animateNumber.numberStepFactories.separator(' ')
+    $('.timer').each ->
+      $(this).animateNumber({
+        number: $(this).data('number'),
+        numberStep: comma_separator_number_step
+      }, 1500)
+
+    map = undefined
+
+    DG.then ->
+      myIcon = DG.icon(
+        iconUrl: 'marker.svg'
+        iconSize: [
+          100
+          150
+        ]
+      )
+      map = DG.map('map',
+        center: [
+          54.8578217760771
+          83.11149179935457
+        ]
+        fullscreenControl: false
+        zoom: 16)
+      DG.marker([54.8578217760771, 83.11149179935457], {icon: myIcon}).addTo(map).bindPopup('Мы здесь!');
+      return
+
+    $('.technology-slider').slick
+      dots: true
+      infinite: true
+      speed: 300
+      arrows: true
+      slidesToShow: 4
+      slidesToScroll: 4
+      responsive: [
+        {
+          breakpoint: 1024
+          settings:
+            slidesToShow: 3
+            slidesToScroll: 3
+            infinite: true
+            dots: true
+        }
+        {
+          breakpoint: 600
+          settings:
+            slidesToShow: 2
+            slidesToScroll: 2
+        }
+        {
+          breakpoint: 480
+          settings:
+            arrows: false
+            dots: false
+            slidesToShow: 1
+            slidesToScroll: 1
+        }
+      ]
+

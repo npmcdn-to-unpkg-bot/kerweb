@@ -15,9 +15,14 @@
 //= require turbolinks
 //= require jquery.turbolinks
 //= require jquery_ujs
-//= require bannerscollection_zoominout
-//= require jquery.ui.touch-punch.min
+//= require bootstrap-sprockets
+//= require wow
+//= require slick
 //= require_tree .
+
+$('document').ready(function () {
+    new WOW().init();
+});
 
 
 
