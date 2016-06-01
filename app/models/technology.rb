@@ -5,7 +5,7 @@ class Technology
   field :link
   has_mongoid_attached_file :image,
                             :styles =>  {
-                                :thumb => ['250x150', :png]
+                                :thumb => ['150x60', :png]
                             }
   validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 end

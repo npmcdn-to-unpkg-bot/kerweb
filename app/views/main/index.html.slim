@@ -11,37 +11,38 @@ section#projects
   #recent-works.off-white
     .portfolio-wrapper.wow.fadeInUp data-wow-delay="300ms" data-wow-duration="700ms"
       ul.portfolio-items
-        - @projects.each do |project|
-          li
-            .portfolio-content
-              img.img-responsive src=project.demo_img(:thumb) alt=""
-              /=image_tag ('temp_img.jpg'), class: 'img-responsive',  alt: ""
-              .overlay
-                h2
-                  = project.name
-                p
-                  = project.description
-                a.folio-link href=project.link
-                  i.fa.fa-long-arrow-right
+        - 2.times do
+          - @projects.each do |project|
+            li
+              .portfolio-content
+                img.img-responsive src=project.demo_img(:thumb) alt=""
+                /=image_tag ('temp_img.jpg'), class: 'img-responsive',  alt: ""
+                .overlay
+                  h2
+                    = project.name
+                  p
+                    = project.description
+                  a.folio-link href=project.link
+                    i.fa.fa-long-arrow-right
 
-section#info data-parallax="scroll" data-image-src="#{image_path('info-bg.jpg')}"
+section#info
   .container
     .text-center.wow.zoomIn.animated data-wow-delay="300ms" data-wow-duration="700ms"
       h1.text-uppercase.white Немного о нас
       h3 Некоторые факты, которые расскажут Вам о нашей работе
     .row.funs
       .col-xs-4.wow.zoomIn.animated.text-center data-wow-delay="500ms" data-wow-duration="700ms"
-        i.fa.fa-group
+        i.fa.fa-stack-overflow
         h2
           = @working_with_us.title
         h3.timer data-number="#{@working_with_us.value}"
       .col-xs-4.wow.zoomIn.animated.text-center data-wow-delay="700ms" data-wow-duration="700ms"
-        i.fa.fa-gift
+        i.fa.fa-html5
         h2
           = @projects_released.title
         h3.timer data-number="#{@projects_released.value}"
       .col-xs-4.wow.zoomIn.animated.text-center data-wow-delay="900ms" data-wow-duration="700ms"
-        i.fa.fa-trophy
+        i.fa.fa-github
         h3
           = @awards_owned.title
         h3.timer data-number="#{@awards_owned.value}"
@@ -56,6 +57,7 @@ section#team
         .col-lg-4.col-md-4.col-sm-6.col-xs-12.employee
           .employee-image
             img src=employee.avatar(:thumb)
+            /=image_tag ('temp_img.jpg'), alt: "", style: 'height: 360px; width: 480px;'
           .employee-overlay
             .description
               h2
@@ -65,7 +67,7 @@ section#team
               h3
                 = employee.position
 
-section#social data-parallax="scroll" data-image-src="#{image_path('social-bg.jpg')}"
+/section#social data-parallax="scroll" data-image-src="#{image_path('social-bg.jpg')}"
   .text.text-center.wow.zoomIn.animated data-wow-delay="300ms" data-wow-duration="700ms" style=("visibility: visible; animation-duration: 700ms; animation-delay: 300ms; animation-name: zoomIn;")
     i.fa.fa-twitter
     h1.text-uppercase Читайте нас в Twitter! Будьте в курсе всех наших событий!
@@ -83,6 +85,7 @@ section#technologies
         - @technologies.each do |technology|
           .technology
             a href=technology.link target="_blank"
+              /=image_tag ('temp_tech.png'), alt: "", style: 'height: 60px; width: 150px;'
               img src=technology.image(:thumb)
 
 
