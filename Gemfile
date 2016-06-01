@@ -45,6 +45,7 @@ group :development do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-puma'
+  gem 'tzinfo-data', platforms: [:mingw, :mswin]
 end
 
 group :production do

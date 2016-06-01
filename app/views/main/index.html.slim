@@ -1,6 +1,6 @@
 section#intro data-parallax="scroll" data-image-src="#{image_path('background.jpg')}"
   .logo.text-center
-    = image_tag 'logo.png', class: 'animated fadeIn'
+    = image_tag 'logo-notext_square_cut.png', class: 'animated fadeIn'
     .title Kernel Web. Студия разработки
   .scroll-to.wow.bounce data-wow-iteration="infinite" data-wow-duration="2s" data-scroll="#projects"
     = fa_icon 'angle-double-down'
@@ -15,6 +15,7 @@ section#projects
           li
             .portfolio-content
               img.img-responsive src=project.demo_img(:thumb) alt=""
+              /=image_tag ('temp_img.jpg'), class: 'img-responsive',  alt: ""
               .overlay
                 h2
                   = project.name
@@ -112,6 +113,9 @@ coffee:
           83.11149179935457
         ]
         fullscreenControl: false
+        scrollWheelZoom: false
+        dragging: false
+        touchZoom: false
         zoom: 16)
       DG.marker([54.8578217760771, 83.11149179935457], {icon: myIcon}).addTo(map).bindPopup('Мы здесь!');
       return

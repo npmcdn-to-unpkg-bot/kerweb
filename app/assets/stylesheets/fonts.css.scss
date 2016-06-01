@@ -1,0 +1,103 @@
+@font-face{
+  font-family: 'proxima_nova_blblack';
+  src: asset_url('proximanova-black.eot');
+  src: asset_url('proximanova-black.eot?#iefix') format('embedded-opentype'),
+  asset_url('proximanova-black.woff2') format('woff2'),
+  asset_url('proximanova-black.woff') format('woff'),
+  asset_url('proximanova-black.ttf') format('truetype'),
+  asset_url('proximanova-black.svg#proxima_nova_blblack') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'proxima_nova_rgbold';
+  src: asset_url('proximanova-bold.eot');
+  src: asset_url('proximanova-bold.eot?#iefix') format('embedded-opentype'),
+  asset_url('proximanova-bold.woff2') format('woff2'),
+  asset_url('proximanova-bold.woff') format('woff'),
+  asset_url('proximanova-bold.ttf') format('truetype'),
+  asset_url('proximanova-bold.svg#proxima_nova_rgbold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'proxima_novabold_italic';
+  src: asset_url('proximanova-boldit.eot');
+  src: asset_url('proximanova-boldit.eot?#iefix') format('embedded-opentype'),
+  asset_url('proximanova-boldit.woff2') format('woff2'),
+  asset_url('proximanova-boldit.woff') format('woff'),
+  asset_url('proximanova-boldit.ttf') format('truetype'),
+  asset_url('proximanova-boldit.svg#proxima_novabold_italic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'proxima_nova_ltlight';
+  src: asset_url('proximanova-light.eot');
+  src: asset_url('proximanova-light.eot?#iefix') format('embedded-opentype'),
+  asset_url('proximanova-light.woff2') format('woff2'),
+  asset_url('proximanova-light.woff') format('woff'),
+  asset_url('proximanova-light.ttf') format('truetype'),
+  asset_url('proximanova-light.svg#proxima_nova_ltlight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'proxima_novalight_italic';
+  src: asset_url('proximanova-lightit.eot');
+  src: asset_url('proximanova-lightit.eot?#iefix') format('embedded-opentype'),
+  asset_url('proximanova-lightit.woff2') format('woff2'),
+  asset_url('proximanova-lightit.woff') format('woff'),
+  asset_url('proximanova-lightit.ttf') format('truetype'),
+  asset_url('proximanova-lightit.svg#proxima_novalight_italic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'proxima_nova_rgregular';
+  src: asset_url('proximanova-reg.eot');
+  src: asset_url('proximanova-reg.eot?#iefix') format('embedded-opentype'),
+  asset_url('proximanova-reg.woff2') format('woff2'),
+  asset_url('proximanova-reg.woff') format('woff'),
+  asset_url('proximanova-reg.ttf') format('truetype'),
+  asset_url('proximanova-reg.svg#proxima_nova_rgregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'proxima_novaregular_italic';
+  src: asset_url('proximanova-regit.eot');
+  src: asset_url('proximanova-regit.eot?#iefix') format('embedded-opentype'),
+  asset_url('proximanova-regit.woff2') format('woff2'),
+  asset_url('proximanova-regit.woff') format('woff'),
+  asset_url('proximanova-regit.ttf') format('truetype'),
+  asset_url('proximanova-regit.svg#proxima_novaregular_italic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'proxima_nova_thextrabold';
+  src: asset_url('proximanova-xbold.eot');
+  src: asset_url('proximanova-xbold.eot?#iefix') format('embedded-opentype'),
+  asset_url('proximanova-xbold.woff2') format('woff2'),
+  asset_url('proximanova-xbold.woff') format('woff'),
+  asset_url('proximanova-xbold.ttf') format('truetype'),
+  asset_url('proximanova-xbold.svg#proxima_nova_thextrabold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}

@@ -6,8 +6,7 @@ nav
     padding: 0 15px
     height: 60px
     line-height: 60px
-    background-color: $main-white-color
-    border-bottom: 2px solid $main-red-color
+    background-color: $main-red-color
     position: fixed
     top: 0
     left: 0
@@ -19,10 +18,13 @@ nav
       vertical-align: middle
       display: inline-block
     a
-      color: $main-red-color
+      color: white
       text-decoration: none
       cursor: pointer
       margin: 0 10px
+      &:hover
+        border-bottom: 1px solid white
+
       
 .text-red
   color: $main-red-color
