@@ -12,3 +12,4 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( jquery.ui.touch-punch.min.js )
 Rails.application.config.assets.precompile += %w( bannerscollection_zoominout.js )
 Rails.application.config.assets.precompile += %w( bannerscollection_zoominout.css )
+Rails.application.config.assets.precompile += %w( zoomico.png )

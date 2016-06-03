@@ -1,0 +1,17 @@
+nav.navbar.navbar-default#top-menu-partial
+  .container-fluid
+    .navbar-header
+      button.navbar-toggle.collapsed aria-expanded="false" data-target="#top-menu-collapse-partial" data-toggle="collapse" type="button"
+        i.fa.fa-bars
+      a.logo href="/"
+        = image_tag 'logo-white.png', class:'img-responsive'
+    #top-menu-collapse-partial.navbar-collapse.collapse aria-expanded="false" style=("height: 1px;")
+      ul.nav.navbar-nav.navbar-right
+        li
+          a.scroll-to href="/#projects" Проекты
+        li
+          a.scroll-to href="/#team" Команда
+        li
+          a.scroll-to href="/#technologies" Технологии
+        li
+          a.scroll-to href="/#contacts" Контакты

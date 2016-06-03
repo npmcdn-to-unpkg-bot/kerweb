@@ -7,6 +7,7 @@ nav
     height: 60px
     line-height: 60px
     background-color: $main-red-color
+    border: 0
     position: fixed
     top: 0
     left: 0
@@ -18,14 +19,53 @@ nav
       vertical-align: middle
       display: inline-block
     a
-      color: white
+      color: $main-white-color
       text-decoration: none
       cursor: pointer
       margin: 0 10px
       &:hover
-        border-bottom: 1px solid white
+        border-bottom: 1px solid $main-white-color
+    .navbar-toggle
+      padding: 0
+      height: 40px
+      background-color: transparent
+      line-height: 40px
+      color: $main-white-color
+      border: 0
+    #top-menu-collapse
+      background-color: $main-red-color
 
-      
+  &#top-menu-partial
+    border-radius: 0
+    margin: 0
+    width: 100%
+    padding: 0 15px
+    height: 60px
+    line-height: 60px
+    background-color: $main-red-color
+    border: 0
+    .logo
+      width: 70px
+      height: 50px
+      vertical-align: middle
+      display: inline-block
+    a
+      color: $main-white-color
+      text-decoration: none
+      cursor: pointer
+      margin: 0 10px
+      &:hover
+        border-bottom: 1px solid $main-white-color
+    .navbar-toggle
+      padding: 0
+      height: 40px
+      background-color: transparent
+      line-height: 40px
+      color: $main-white-color
+      border: 0
+    #top-menu-collapse-partial
+      background-color: $main-red-color
+
 .text-red
   color: $main-red-color
 

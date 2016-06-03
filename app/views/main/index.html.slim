@@ -16,13 +16,12 @@ section#projects
             li
               .portfolio-content
                 img.img-responsive src=project.demo_img(:thumb) alt=""
-                /=image_tag ('temp_img.jpg'), class: 'img-responsive',  alt: ""
                 .overlay
                   h2
                     = project.name
                   p
                     = project.description
-                  a.folio-link href=project.link
+                  = link_to project_path(project.slug), class: 'folio-link'
                     i.fa.fa-long-arrow-right
 
 section#info
@@ -57,7 +56,6 @@ section#team
         .col-lg-4.col-md-4.col-sm-6.col-xs-12.employee
           .employee-image
             img src=employee.avatar(:thumb)
-            /=image_tag ('temp_img.jpg'), alt: "", style: 'height: 360px; width: 480px;'
           .employee-overlay
             .description
               h2
@@ -67,15 +65,6 @@ section#team
               h3
                 = employee.position
 
-/section#social data-parallax="scroll" data-image-src="#{image_path('social-bg.jpg')}"
-  .text.text-center.wow.zoomIn.animated data-wow-delay="300ms" data-wow-duration="700ms" style=("visibility: visible; animation-duration: 700ms; animation-delay: 300ms; animation-name: zoomIn;")
-    i.fa.fa-twitter
-    h1.text-uppercase Читайте нас в Twitter! Будьте в курсе всех наших событий!
-    hr
-    h2 Все самое интересное из мира веб-разработки.
-    p
-      | @
-      a href="#" kerweb
 section#technologies
   .container
     .row
@@ -85,8 +74,39 @@ section#technologies
         - @technologies.each do |technology|
           .technology
             a href=technology.link target="_blank"
-              /=image_tag ('temp_tech.png'), alt: "", style: 'height: 60px; width: 150px;'
               img src=technology.image(:thumb)
+
+section#contacts
+  .container
+    .row.wow.zoomIn.animated data-wow-delay="300ms" data-wow-duration="700ms"
+      h1.text-center.red Контакты
+    .row
+      .col-lg-6.col-md-6.col-sm-6.col-xs-12.wow.zoomIn.animated data-wow-delay="300ms" data-wow-duration="700ms"
+        h2 Приходите к нам
+        p
+          i.fa.fa-map-marker
+          span
+            |&nbsp;
+            |Адрес: ул.Николаева 12, Новосибирск
+        p
+          i.fa.fa-envelope
+          span
+            |&nbsp;
+            |Email:&nbsp;
+            a href="mailto:hello@kerweb.ru"
+              |hello[at]kerweb.ru
+      .col-lg-6.col-md-6.col-sm-6.col-xs-12.wow.zoomIn.animated data-wow-delay="300ms" data-wow-duration="700ms"
+        h2 Мы работаем
+        p
+          i.fa.fa-clock-o
+          span
+            |&nbsp;
+            |Пн-Пт 9.00 - 20.00
+        p
+          i.fa.fa-clock-o
+          span
+            |&nbsp;
+            |Сб-Вс Выходной
 
 
 section#map

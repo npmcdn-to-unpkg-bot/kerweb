@@ -9,7 +9,10 @@ class Project
         :thumb => ['635x635', :png]
       }
 
-
+  has_mongoid_attached_file :wide_image,
+                            :styles =>  {
+                                :thumb => ['1680x450', :png]
+                            }
 
   field :link
   field :link_text
@@ -22,7 +25,7 @@ class Project
     cur_object.name.to_url
   end
 
-  has_many :technologies
+  has_and_belongs_to_many :technologies
 
-  validates_attachment_content_type :demo_img, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
+  validates_attachment_content_type :demo_img, :wide_image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 end
