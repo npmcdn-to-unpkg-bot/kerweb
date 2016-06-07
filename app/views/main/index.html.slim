@@ -28,18 +28,17 @@ section#projects
   #recent-works.off-white
     .portfolio-wrapper.wow.fadeInUp data-wow-delay="300ms" data-wow-duration="700ms"
       ul.portfolio-items
-        - 2.times do
-          - @projects.each do |project|
-            li
-              .portfolio-content
-                img.img-responsive src=project.demo_img(:thumb) alt=""
-                .overlay
-                  h2
-                    = project.name
-                  p
-                    = project.description
-                  = link_to project_path(project.slug), class: 'folio-link'
-                    i.fa.fa-long-arrow-right
+        - @projects.each do |project|
+          li
+            .portfolio-content
+              img.img-responsive src=project.demo_img(:thumb) alt=""
+              .overlay
+                h2
+                  = project.name
+                p
+                  = project.description
+                = link_to project_path(project.slug), class: 'folio-link'
+                  i.fa.fa-long-arrow-right
 
 section#info
   .container
