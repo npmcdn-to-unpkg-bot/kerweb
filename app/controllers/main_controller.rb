@@ -1,6 +1,6 @@
 class MainController < ApplicationController
   def index
-    @projects          = Project.all.order_by(created_at: 'desc')
+    @projects          = Project.all.order_by(order: 'asc')
     @employers         = Employee.all.order_by(order_number: 'asc')
     @technologies      = Technology.all
     @statistics = get_random_statistics(3)
