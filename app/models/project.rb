@@ -11,7 +11,7 @@ class Project
 
   has_mongoid_attached_file :wide_image,
                             :styles =>  {
-                                :thumb => ['1680x450', :jpg]
+                                :thumb => ['2000x600', :jpg]
                             }
 
   field :link
