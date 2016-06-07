@@ -44,7 +44,7 @@ section#projects
 section#info
   .container
     .text-center.wow.zoomIn.animated data-wow-delay="300ms" data-wow-duration="700ms"
-      h1.text-center.red Занимательные цифры
+      h1.text-center.red Компания в цифрах
       h3 Эта информация вряд ли будет вам полезна
     .row.funs
       - @statistics.each do |statistic|
@@ -62,7 +62,7 @@ section#team
       h1.text-center.red Команда
     .row
       - @employers.each do |employee|
-        .col-lg-3.col-md-3.col-sm-6.col-xs-12.employee
+        .col-lg-2.col-md-2.col-sm-6.col-xs-12.employee.centered
           .employee-image
             img src=employee.avatar(:thumb)
           .employee-overlay
