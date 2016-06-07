@@ -1,3 +1,20 @@
+nav.navbar.navbar-default#top-menu.animated
+  .container-fluid
+    .navbar-header
+      button.navbar-toggle.collapsed aria-expanded="false" data-target="#top-menu-collapse" data-toggle="collapse" type="button"
+        i.fa.fa-bars
+      a.logo href="#"
+        = image_tag 'logo-white.png', class: 'img-responsive'
+    #top-menu-collapse.navbar-collapse.collapse aria-expanded="false" style=("height: 1px;")
+      ul.nav.navbar-nav.navbar-right
+        li
+          a.scroll-to data-scroll="#projects" Проекты
+        li
+          a.scroll-to data-scroll="#team" Команда
+        li
+          a.scroll-to data-scroll="#technologies" Технологии
+        li
+          a.scroll-to data-scroll="#contacts" Контакты
 section#intro data-parallax="scroll" data-image-src="#{image_path('background.jpg')}"
   .logo.text-center
     = image_tag 'logo-notext_square_cut.png', class: 'animated fadeIn'
@@ -30,21 +47,13 @@ section#info
       h1.text-uppercase.white Немного о нас
       h3 Некоторые факты, которые расскажут Вам о нашей работе
     .row.funs
-      .col-xs-4.wow.zoomIn.animated.text-center data-wow-delay="500ms" data-wow-duration="700ms"
-        i.fa.fa-stack-overflow
-        h2
-          = @working_with_us.title
-        h3.timer data-number="#{@working_with_us.value}"
-      .col-xs-4.wow.zoomIn.animated.text-center data-wow-delay="700ms" data-wow-duration="700ms"
-        i.fa.fa-html5
-        h2
-          = @projects_released.title
-        h3.timer data-number="#{@projects_released.value}"
-      .col-xs-4.wow.zoomIn.animated.text-center data-wow-delay="900ms" data-wow-duration="700ms"
-        i.fa.fa-github
-        h3
-          = @awards_owned.title
-        h3.timer data-number="#{@awards_owned.value}"
+      - @statistics.each do |statistic|
+        .col-xs-4.wow.zoomIn.animated.text-center data-wow-delay="500ms" data-wow-duration="700ms"
+          i.fa class=statistic.icon
+          h2
+            = statistic.title
+          h3.timer data-number="#{statistic.value}"
+
 
 
 section#team
@@ -53,7 +62,7 @@ section#team
       h1.text-center.red Команда
     .row
       - @employers.each do |employee|
-        .col-lg-4.col-md-4.col-sm-6.col-xs-12.employee
+        .col-lg-3.col-md-3.col-sm-6.col-xs-12.employee
           .employee-image
             img src=employee.avatar(:thumb)
           .employee-overlay
@@ -175,3 +184,5 @@ coffee:
         }
       ]
 
+    $('.scroll-to').click ->
+      $("html, body").stop().animate({scrollTop: $($(this).attr('data-scroll')).offset().top - 60}, 600)

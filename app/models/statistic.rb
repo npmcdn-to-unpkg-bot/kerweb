@@ -1,9 +1,9 @@
 class Statistic
   include Mongoid::Document
 
-  field :key
   field :title
   field :value
+  field :icon
 
-  validates_presence_of :key, :title, :value
+  validates_presence_of :title, :value, :icon
 end

@@ -24,25 +24,6 @@ html lang="ru"
 
   body
     #wrapper
-      nav.navbar.navbar-default#top-menu.animated
-        .container-fluid
-          .navbar-header
-            button.navbar-toggle.collapsed aria-expanded="false" data-target="#top-menu-collapse" data-toggle="collapse" type="button"
-              i.fa.fa-bars
-            a.logo href="#"
-              = image_tag 'logo-white.png', class:'img-responsive'
-          #top-menu-collapse.navbar-collapse.collapse aria-expanded="false" style=("height: 1px;")
-            ul.nav.navbar-nav.navbar-right
-              li
-                a.scroll-to data-scroll="#projects" Проекты
-              li
-                a.scroll-to data-scroll="#team" Команда
-              li
-                a.scroll-to data-scroll="#technologies" Технологии
-              li
-                a.scroll-to data-scroll="#contacts" Контакты
-
-
       = yield
       footer
         p.text-center
@@ -52,8 +33,5 @@ html lang="ru"
           |&nbsp;
           = DateTime.now.strftime("%Y")
 
-    coffee:
-      $ ->
-        $('.scroll-to').click ->
-          $("html, body").animate({scrollTop: $($(this).attr('data-scroll')).offset().top - 60}, 600)
+
 
