@@ -6,12 +6,12 @@ class Project
 
   has_mongoid_attached_file :demo_img,
       :styles =>  {
-        :thumb => ['635x635', :png]
+        :thumb => ['635x635', :jpg]
       }
 
   has_mongoid_attached_file :wide_image,
                             :styles =>  {
-                                :thumb => ['1680x450', :png]
+                                :thumb => ['1680x450', :jpg]
                             }
 
   field :link

@@ -9,7 +9,7 @@ class Employee
 
   has_mongoid_attached_file :avatar,
                             :styles =>  {
-                                :thumb => ['480х360', :png]
+                                :thumb => ['480х360', :jpg]
                             }
   validates_attachment_content_type :avatar, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 end
