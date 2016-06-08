@@ -3,6 +3,7 @@ class Technology
   include Mongoid::Paperclip
 
   field :link
+  alias :name :link
   has_mongoid_attached_file :image,
                             :styles =>  {
                                 :thumb => ['150x60', :png]

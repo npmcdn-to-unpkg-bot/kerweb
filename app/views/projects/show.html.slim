@@ -7,7 +7,7 @@
       h1.text-center.red
         = @project.name
       p
-        = @project.description
+        == @project.description
 
   - if @project.technologies.present?
     section#technologies
