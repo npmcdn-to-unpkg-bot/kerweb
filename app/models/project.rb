@@ -18,7 +18,7 @@ class Project
   field :link_text
   field :name
   field :order, type: Integer
-  field :description, type: String
+  field :description
 
   slug :name
   slug do |cur_object|

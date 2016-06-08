@@ -19,6 +19,7 @@
 //= require wow
 //= require slick
 //= require_tree .
+//= require ckeditor/init
 
 $('document').ready(function () {
     new WOW().init();
