@@ -23,6 +23,7 @@ gem 'font-awesome-rails'
 gem 'animate-rails'
 gem 'wow-rails'
 gem 'slick_rails'
+gem 'ckeditor'
 
 #image processor
 gem 'paperclip', '~> 4.3'
