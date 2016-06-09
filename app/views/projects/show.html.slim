@@ -3,9 +3,10 @@
   section#project-image
     img src=@project.wide_image(:thumb)
   section#project-description
-    .container-fluid
+    .row
       h1.text-center.red
         = @project.name
+    .container-fluid
       p
         == @project.description
 
@@ -13,7 +14,7 @@
     section#technologies
       .container
         .row
-          h3.text-uppercase.text-center.red Задействованные технологии
+          h2.text-uppercase.text-center.red Задействованные технологии
         .row
           .technology-slider
             - @project.technologies.each do |technology|
