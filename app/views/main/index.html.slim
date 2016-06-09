@@ -18,25 +18,25 @@ nav.navbar.navbar-default#top-menu.animated
 section#intro data-parallax="scroll" data-image-src="#{image_path('background.jpg')}"
   .logo.text-center
     = image_tag 'logo-notext_square_cut.png', class: 'animated fadeIn'
-    .title Kernel Web. Студия разработки
+    h1.title Kernel Web. Студия разработки
   .scroll-to.wow.bounce data-wow-iteration="infinite" data-wow-duration="2s" data-scroll="#projects"
     = fa_icon 'angle-double-down'
 
 section#projects
   .row
-    h1.text-center.red Проекты
+    h2.text-center.red Проекты
   #recent-works.off-white
     .portfolio-wrapper.wow.fadeInUp data-wow-delay="300ms" data-wow-duration="700ms"
       ul.portfolio-items
         - @projects.each do |project|
           li
             .portfolio-content
-              /img.img-responsive src=project.demo_img(:thumb) alt=""
-              =image_tag ('temp_img.jpg')
+              img.img-responsive src=project.demo_img(:thumb) alt=""
+              /=image_tag ('temp_img.jpg')
               .overlay
-                h2
-                  = project.name
                 h3
+                  = project.name
+                .desciption
                   == project.description[0, 100] + '...'
                 = link_to project_path(project.slug), class: 'folio-link'
                   i.fa.fa-long-arrow-right
@@ -44,40 +44,41 @@ section#projects
 section#info
   .container
     .text-center.wow.zoomIn.animated data-wow-delay="300ms" data-wow-duration="700ms"
-      h1.text-center.red Компания в цифрах
-      h3 Эта информация вряд ли будет вам полезна
+      h2.text-center.red Компания в цифрах
+      h4 Эта информация вряд ли будет вам полезна
     .row.funs
       - @statistics.each do |statistic|
         .col-xs-4.wow.zoomIn.animated.text-center data-wow-delay="500ms" data-wow-duration="700ms"
           i.fa class=statistic.icon
-          h2
+          h3
             = statistic.title
-          h3.timer data-number="#{statistic.value}"
+          .timer data-number="#{statistic.value}"
 
 
 
 section#team
   .container-fluid
     .row
-      h1.text-center.red Команда
+      h2.text-center.red Команда
     .row
       - @employers.each do |employee|
         .col-lg-2.col-md-2.col-sm-6.col-xs-12.employee.centered
           .employee-image
             img src=employee.avatar(:thumb)
+            /=image_tag ('temp_img.jpg')
           .employee-overlay
             .description
-              h2
-                = employee.second_name
-                |&nbsp;
-                = employee.first_name
               h3
+                = employee.first_name
+                |&nbsp;
+                = employee.second_name
+              h4
                 = employee.position
 
 section#technologies
   .container
     .row
-      h1.text-center.red Технологии
+      h2.text-center.red Технологии
     .row
       .technology-slider
         - @technologies.each do |technology|
@@ -88,10 +89,10 @@ section#technologies
 section#contacts
   .container
     .row.wow.zoomIn.animated data-wow-delay="300ms" data-wow-duration="700ms"
-      h1.text-center.red Контакты
+      h2.text-center.red Контакты
     .row
       .col-lg-6.col-md-6.col-sm-6.col-xs-12.wow.zoomIn.animated data-wow-delay="300ms" data-wow-duration="700ms"
-        h2 Приходите к нам
+        h3 Приходите к нам
         p
           i.fa.fa-map-marker
           span
@@ -105,7 +106,7 @@ section#contacts
             a href="mailto:hello@kerweb.ru"
               |hello[at]kerweb.ru
       .col-lg-6.col-md-6.col-sm-6.col-xs-12.wow.zoomIn.animated data-wow-delay="300ms" data-wow-duration="700ms"
-        h2 Мы работаем
+        h3 Мы работаем
         p
           i.fa.fa-clock-o
           span
