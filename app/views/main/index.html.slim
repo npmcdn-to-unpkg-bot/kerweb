@@ -31,11 +31,12 @@ section#projects
         - @projects.each do |project|
           li
             .portfolio-content
-              img.img-responsive src=project.demo_img(:thumb) alt=""
-              /=image_tag ('temp_img.jpg')
+              /img.img-responsive src=project.demo_img(:thumb) alt=""
+              =image_tag ('temp_img.jpg')
               .overlay
                 h3
-                  = project.name
+                  = link_to project_path(project.slug)
+                    = project.name
                 .desciption
                   == project.description[0, 100] + '...'
                 = link_to project_path(project.slug), class: 'folio-link'
