@@ -51,9 +51,9 @@ section#info
       - @statistics.each do |statistic|
         .col-xs-4.wow.zoomIn.animated.text-center data-wow-delay="500ms" data-wow-duration="700ms"
           i.fa class=statistic.icon
+          .timer data-number="#{statistic.value}"
           h3
             = statistic.title
-          .timer data-number="#{statistic.value}"
 
 
 
