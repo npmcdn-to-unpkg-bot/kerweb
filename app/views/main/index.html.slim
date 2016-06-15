@@ -39,7 +39,7 @@ section#projects
                   = link_to project_path(project.slug)
                     = project.name
                 .desciption
-                  == project.description[0, 200] + '...'
+                  == project.description[0, 150] + '...'
                 = link_to project_path(project.slug), class: 'folio-link'
                   i.fa.fa-long-arrow-right
 
