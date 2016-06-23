@@ -9,14 +9,7 @@
     .container-fluid
       p
         == @project.description
-      p
-        .social-likes data-url=request.original_url data-media=@project.demo_img(:thumb)
-          .facebook title=("Поделиться ссылкой на Фейсбуке")  Facebook
-          .twitter title=("Поделиться ссылкой в Твиттере")  Twitter
-          .mailru title=("Поделиться ссылкой в Моём мире")  Мой мир
-          .vkontakte title=("Поделиться ссылкой во Вконтакте")  Вконтакте
-          .odnoklassniki title=("Поделиться ссылкой в Одноклассниках")  Одноклассники
-          .plusone title=("Поделиться ссылкой в Гугл-плюсе")  Google+
+
 
   - if @project.technologies.present?
     section#technologies
@@ -29,6 +22,15 @@
               .technology
                 a href=technology.link target="_blank"
                   img src=technology.image(:thumb)
+    .container-fluid
+      p
+        .social-likes data-url=request.original_url data-media=@project.demo_img(:thumb)
+          .facebook title=("Поделиться ссылкой на Фейсбуке")  Facebook
+          .twitter title=("Поделиться ссылкой в Твиттере")  Twitter
+          .mailru title=("Поделиться ссылкой в Моём мире")  Мой мир
+          .vkontakte title=("Поделиться ссылкой во Вконтакте")  Вконтакте
+          .odnoklassniki title=("Поделиться ссылкой в Одноклассниках")  Одноклассники
+          .plusone title=("Поделиться ссылкой в Гугл-плюсе")  Google+
 
 coffee:
   $('.technology-slider').slick
